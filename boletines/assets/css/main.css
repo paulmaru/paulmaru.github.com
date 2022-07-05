@@ -1,0 +1,227 @@
+
+/* CSS HEX 
+--dark-olive-green: #606c38ff;
+--kombu-green: #283618ff;
+--cornsilk: #fefae0ff;
+--earth-yellow: #dda15eff;
+--liver-dogs: #bc6c25ff;
+*/
+
+/*   ESPECIFICIDAD
+1. uso de "!important" evitar usarlo
+2. Atributo "style"
+
+3. Selector por ID (#)
+4. Selectores de clase (.), atributos y pseudo clases
+5. Selectores de tipo y pseudo elementos
+*/
+
+/* position: static | relative | absolute | fixed | sticky*/
+
+/* TAMAÑO
+EMS (em) Relativo al tamaño de la fuente del contenedor
+EXs (ex) tamaño relativo de la "x" minúscula de la fuente del contenedor
+REMs (rem) como en EM pero la fuente de referencia es la tipografía de todo el documento, <html>
+VW (vw) Caada unidad es 1% del ancho del vieweport
+VH (vh) 1% del alto del viewport
+VMIN (vmin) es el 1% del ancho o del alto del viewport, dependiendo cuál sea el más pequeño
+
+*/
+
+
+html{
+    font-family: 'Nunito', sans-serif;
+}
+
+img{
+    max-width: 100%;
+
+}
+
+a{
+    text-decoration: none;
+    color: #d500f9;
+}
+
+a:hover{
+    opacity: 50%;    
+}
+
+/*con "." selector de clase*/
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container{
+    background: #3CA55C;  /* fallback for old browsers */
+    background: -webkit-radial-gradient()(to right, #3CA55C, #B5AC49);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3CA55C, #B5AC49); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: radial-gradient(ellipse at top, #e66465, transparent),
+            radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+    */
+    height: 100vh; /*vh es el viewport, la pantalla*/
+    display: flex; /*para usar flexbox en él y los hijos*/
+    align-items: center;
+    justify-content: center;
+}
+ 
+.content{
+    max-width: 960px;
+    width: 100%;
+    /*max-height: 500px;*/
+    /*height: 100%;*/
+    height: 80vh;
+    background-color: white;
+    /*box-shadow diferenciaHorizontal diferenciaVertical desenfoque amplitud colorSombra*/
+    box-shadow: 0 3px 6px rgba(0, 0, 0.16), 0 3px 6px rgba(0, 0,0.23) ; 
+    border-radius: 4px;
+    position: relative;
+    padding: 1.8em;
+    overflow: auto;
+    /*overflow-y: scroll;
+    overflow-x: hidden;*/
+}
+
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.close{
+    height: 2.5em;
+    width: 2.5em;
+    /*height: 40px;
+    width: 40px;*/
+    color: white;
+    border-radius: 50%;
+    background-color: #3CA55C;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0.16), 0 3px 6px rgba(0, 0,0.23) ; 
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.paragraph{
+    line-height: 1.8em;
+    font-weight: 300;
+}
+
+
+.red{
+    height: 200px;
+    width: 100px;
+    background-color: blue;
+    color:yellow;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table td, .table th{
+    padding: 1em;
+    text-align: left;
+}
+
+.table tr:nth-child(even){
+    background-color: #a3b18a;
+}
+ /* CSS HEX 
+--dark-olive-green: #606c38ff;
+--kombu-green: #283618ff;
+--cornsilk: #fefae0ff;
+--earth-yellow: #dda15eff;
+--liver-dogs: #bc6c25ff;
+*/
+
+.fa-star{
+    color: #ffc400;
+}
+
+.title-item{
+    /*
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #bc6c25ff;
+    */
+    border-bottom:  2px solid #bc6c25ff;
+    padding-bottom: 1em;
+    font-size: 2em;
+    
+}
+
+.address{
+    font-weight: bold;
+    color: #bc6c25ff;
+    font-size: 1.2em;
+
+    margin-top: 1em;
+    display: inline-block;
+}
+
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 250px;
+}
+
+.position{
+    background-color: #bc6c25ff;
+    color: white;
+    padding: 0.5em;
+
+    /*
+    border-top-left-radius: 1em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    */
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+
+/* con "#" selectores por ID*/
+#boton-pago{
+    background-color: yellow;
+}
+
+/*Sin nada al principio son selectores de tipo*/
+/*
+td{
+    border:solid 1px;
+}
+*/
+
+
+
+@media (max-width:600px){
+    .content{
+        padding: 1em;
+    }
+    td{
+        display: block;
+        width: 100%;
+    }
+    td:nth-of-type(1){
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #bc6c25ff;
+    }
+    th{
+        display: none;
+    }
+
+}
+
+@media (min-height:550px){
+    .content{
+        height: 500px;
+    }
+
+}
