@@ -43,7 +43,7 @@ links.forEach(function(link){
         setTimeout(function(){
             location.href = "../index.html";
         },650);
-        
+
 
         return false;
     })

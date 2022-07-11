@@ -1,17 +1,22 @@
+/* SELECTORES
+-Etiqueta (sin prefijo)
+-ID (#)
+-Clase (.)
 
-/* CSS HEX 
---dark-olive-green: #606c38ff;
---kombu-green: #283618ff;
---cornsilk: #fefae0ff;
---earth-yellow: #dda15eff;
---liver-dogs: #bc6c25ff;
-*/
+SELECTORES AVANZADOS
+h1, p{}                 Se pueden indicar varios selectores separados por comas
+span p{}                afecta a la etiqueta p que se encuentra dentro de una etiqueta span
+h2.ejemplo{}            afecta a etiquetas h2 con la clase "ejemplo"
+#colores > ul{}         afecta a hijos
+#colores > ul > li{}    afecta a nietos
+a[class]{}              afecta a etiquetas "a" que tengan cualquier clase
+a[class="ejemplo"]{}    afecta a etiquetas "a" que tengan la clase "ejemplo"
 
-/*   ESPECIFICIDAD
+
+ESPECIFICIDAD
 1. uso de "!important" evitar usarlo
 2. Atributo "style"
-
-3. Selector por ID (#)
+3. Selector por ID (#) (para definir elemento único)
 4. Selectores de clase (.), atributos y pseudo clases
 5. Selectores de tipo y pseudo elementos
 */
@@ -72,9 +77,10 @@ a:hover{
     /*max-height: 500px;*/
     /*height: 100%;*/
     height: 80vh;
-    background-color: white;
+    background-color:  white;
     /*box-shadow diferenciaHorizontal diferenciaVertical desenfoque amplitud colorSombra*/
-    box-shadow: 0 3px 6px rgba(0, 0, 0.16), 0 3px 6px rgba(0, 0,0.23) ; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) ;
+
     border-radius: 4px;
     position: relative;
     padding: 1.8em;
@@ -184,11 +190,29 @@ a:hover{
     */
     border-radius: 4px;
     margin-right: 0.5em;
+
+}
+
+
+/* Efecto tipo polaroid para fotografías*/
+.polaroid{
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+.textopolaroid{
+    text-align: center;
 }
 
 /* con "#" selectores por ID*/
 #boton-pago{
     background-color: yellow;
+
+
 }
 
 /*Sin nada al principio son selectores de tipo*/
@@ -225,3 +249,19 @@ td{
     }
 
 }
+
+
+@media screen and (max-width: 480px){ /* iphone 4 */
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width:760px){ /* phablets o tablets */
+
+}
+
+@media screen and (min-width: 761px){ /* pantallas grandes */
+
+}
+
+
