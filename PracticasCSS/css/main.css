@@ -74,7 +74,7 @@ img{
 .modal-content{
     margin: auto;
     display: block;
-    width: 80%;
+    width: 95%;
     max-width: 700px;
     animation: zoom 0.5s;
 
@@ -86,6 +86,11 @@ img{
     font-size: 40px;
     color:white;
     cursor: pointer;
+}
+
+@keyframes zoom {
+    from{transform: scale(0);}
+    to{transform: scale(1);}
 }
 
 
@@ -142,12 +147,119 @@ li a{
 /* NavBar fin*/
 
 
-@keyframes zoom {
-    from{transform: scale(0);}
-    to{transform: scale(1);}
+.practicaFlexbox{
+    display: flex;
+    margin: 5px;
+    background-color: #f5f5f5;
+    justify-content: flex-end;
+    /*flex-wrap: nowrap;
+    flex-direction: row;*/
+    flex-flow: row wrap;
+    justify-content: center; /*eje principal*/
+    
+    height: 600px;
+    align-items:center; /*eje cruzado*/
+}
+
+.practicaFlexbox button{
+    border:0;
+    font-size: 1em;
+    outline:none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    /*flex-grow: 1;*/
+    /*flex-basis: 200px;*/
+    /*flex: 1 2 500px;*/
+    min-width: 600px;
+}
+.practicaFlexbox p{
+    background-color: #222;
+    height: 100px;
+}
+.practicaFlexbox button:nth-child(1){
+    background-color: crimson;
+    flex-grow: 2;
+}
+.practicaFlexbox button:nth-child(2){
+    background-color: orange;
+    flex-grow: 3;
+}
+.practicaFlexbox button:nth-child(3){
+    background-color: darkcyan;
+    flex-shrink: 4;
+    align-self: flex-start; /*sobreescribe align-item*/
 }
 
 
+
+.practica2Flex{
+    background-color: aqua;
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.circleButton{
+    width: 50px;
+    height: 50px;
+     background-color: white;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+}
+
+
+/*******************/
+/* práctica de GRID*/
+/*******************/
+.practicaGrid{
+    display: grid;
+    height: 300px;
+    width: 500px;
+    background-color: blue;
+    /*grid-template-columns: 200px 300px;*/
+    /*grid-template-rows: 200px 100px;*/
+    /*grid-template: 200px 100px / [inicia-header] 200px  300px [final-header];*/
+    /*grid-template-columns: [inicia-header] repeat(12, 8.66%) [final-header];*/
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "nav nav nav nav nav nsav asd"
+                        "body body body body body body body"
+                        "footer footer footer footer footer footer footer";
+
+    align-items: center;
+}
+.red{
+    background-color: red;
+    /*grid-column-start: 1;
+    grid-column-end: 3;*/
+    /*grid-column: inicia-header / 2;
+    grid-row: 1   ;*/
+
+    /*como están encimados, se manda al frente*/
+    /*position: relative;
+    z-index: 1 ;*/
+
+    /*grid-area: 2 / 4 / 3 / 7;*/
+    grid-area: footer;
+    align-self: stretch;
+}
+.yellow{
+    background-color: yellow;
+    /*grid-column: 2 / 3;
+    grid-row: 1   ;*/
+    grid-area: nav;
+    width: 300px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
 
 @media screen and (max-width: 480px){ /* iphone 4 */
     body{

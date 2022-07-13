@@ -1,6 +1,7 @@
 var modal = $('#modal');
 
 $(function(){
+    // Ventana Modal
     $('img').click(function(){
         var idImg = $(this).attr("id");
         console.log(idImg);
